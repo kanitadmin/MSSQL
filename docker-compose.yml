@@ -11,7 +11,7 @@ services:
       - mssql_backup:/var/opt/mssql/backup
     environment:
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Express
+      - MSSQL_PID=FG86G-CHH2T-CB7NJ-XT7D2-V8V4X
       - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
       - MSSQL_DATA_DIR=/var/opt/mssql/data
       - MSSQL_LOG_DIR=/var/opt/mssql/log
