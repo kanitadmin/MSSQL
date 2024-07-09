@@ -12,6 +12,7 @@ services:
     environment:
       - TZ=Asia/Bangkok
       - MSSQL_AGENT_ENABLED=true
+      - MSSQL_COLLATION=THAI_CI_AI
       - ACCEPT_EULA=Y
       - MSSQL_PID=${MSSQL_PID}
       - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
