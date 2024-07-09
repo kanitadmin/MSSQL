@@ -17,6 +17,13 @@ services:
       - MSSQL_BACKUP_DIR=/var/opt/mssql/backup
     networks:
       - mssql_network
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
 volumes:
   mssql_data:
   mssql_backup:
