@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  db:
+  mssql:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: mssql
     ports:
