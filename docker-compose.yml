@@ -6,21 +6,17 @@ services:
     ports:
       - 1433:1433
     volumes:
-      - mssql_data:/var/opt/mssql/data
-      - mssql_log:/var/opt/mssql/log
+      - mssql_data:/var/opt/mssql
       - mssql_backup:/var/opt/mssql/backup
     environment:
       - ACCEPT_EULA=Y
       - MSSQL_PID=${MSSQL_PID}
       - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
-      - MSSQL_DATA_DIR=/var/opt/mssql/data
-      - MSSQL_LOG_DIR=/var/opt/mssql/log
       - MSSQL_BACKUP_DIR=/var/opt/mssql/backup
     networks:
       - mssql_network
 volumes:
   mssql_data:
-  mssql_log:
   mssql_backup:
 networks:
   mssql_network:
