@@ -11,6 +11,7 @@ services:
       - mssql_backup:/var/opt/mssql/backup
     environment:
       - TZ=Asia/Bangkok
+      - MSSQL_AGENT_ENABLED=true
       - ACCEPT_EULA=Y
       - MSSQL_PID=${MSSQL_PID}
       - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
